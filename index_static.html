@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code base</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="#top">
+        <span>
+        <h2 id="home">
+            Code IT forum
+        </h2>
+        </span>
+            <ul>
+                <li onclick="getFunction(1)">Home</li>
+                <li onclick="getFunction(2)">Post</li>
+                <li onclick="getFunction(3)">Code</li>
+                <li onclick="getFunction(4)">About</li>
+            </ul>
+    </header>
+
+<!--     <img src="./Fimage.jpg" id="Fimage"> -->
+<div class="topic-div">
+    <h2 class="topic-div-title">
+        Available Programs
+    </h2>
+    <div class="list-topics">
+        <a href="#1">DS inLab 2 linkedlist</a> 
+        <a href="#2">OOPS inLab 3 matrix problem (copy constucter)</a> 
+        <a href="#3">expand char in Easy part 3 in c </a> 
+        <a href="#4">expand char in Easy part 3 in c++ </a>
+        <a href="#5">OOPS inLab3 age and salary program</a>
+        <a href="#6">OOPS inLab 4 shop ItemA and ItemB program</a>
+        <a href="#7">c++ Easy part3 betting game dice roll program </a>
+        <a href="#8">c++ Easy part3 count of common factors</a>    
+        <a href="#9">oops inLab 4 define class child program</a>
+        <a href="#10">oops inLab 4 Fruits Apple and Orange program</a>
+        <a href="#11">oops inLab 4 Tasks Designation Hierarchy </a>
+        <a href="#12">DS inLab5 Expression Tree & Traversals</a>
+        <a href="#13">OOPS inLab 4 Election Two Parties</a>
+        <a href="#14">OOPS inLab 5 Unary Operator Overloading - class Distance</a>
+        <a href="#15">OOPS inLab 5 Marks of Two Student</a>
+        <a href="#16">OOPS inLab 5 sum of Two Distance</a>
+        <a href="#17">DS inLab 8 Hash Table - Linear Probing</a>
+        <a href="#18">DS inLab 8 Hash Table - Quadratic Probing</a>
+        
+
+    </div>
+</div>
+</div>
+
+<div class="master anchor" id="1">
+    <h2>DS inLab 2 linkedlist</h2>
+    <div class="code">
+struct Node* route;
+void insert (int perData,int data){
+    route = head;
+    struct Node* temp = (struct Node*) malloc(sizeof(struct Node));
+    temp-&gt;data = data;
+    if(head!=NULL){
+        while (route-&gt;data!=perData && route-&gt;next!=NULL){
+            
+            route = route-&gt;next;
+        }
+        if(route-&gt;next==NULL && route-&gt;data!=perData){
+            printf("Element not found\n");
+            
+        }else{
+            struct Node* track = route-&gt;next;
+            route-&gt;next = temp;
+            temp-&gt;next = track;
+            printf("Inserted: %d\n",data);
+        }
+        
+    }
+}
+void display(){
+    route = head;
+    if(route!=NULL){
+    while(route!=NULL){
+        printf("%d ",route-&gt;data);
+        route = route-&gt;next;
+    }
+    printf("\n");
+    }else{
+        printf("List is empty\n");
+    }
+}
+void append(int data){
+    route = head;
+    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
+    temp-&gt;data = data;
+    temp-&gt;next = NULL;
+    if(route==NULL){
+        head = temp;
+    }
+    else{
+        while(route-&gt;next!=NULL){
+            route = route-&gt;next;
+        }
+        route-&gt;next = temp;
+    }
+    printf("Appended: %d\n",data);
+}
+void delete(int target){
+    route = head;
+    struct Node* temp;
+    int flag = 0;
+    if(head==NULL){
+        printf("Element not found\n");
+    return ;
+    }
+    if(route-&gt;data!=target){
+        while(route!=NULL){
+            if(route-&gt;data == target){
+                flag = 1;
+                break;
+            }
+        temp = route;
+        route = route-&gt;next;
+    }
+        
+    if(flag){
+        temp-&gt;next =  route-&gt;next;
+        free(route);
+        printf("Deleted: %d\n",target);
+        return ;
+    }
+    else{
+        printf("Element not found\n");
+        return ;
+    }
+    
+    
+    }
+        struct Node* okok = head;
+        head = head-&gt;next;
+        free(okok);
+        printf("Deleted: %d\n",target);
+    
+    
+}
+    </div>
+</div>
+<div class="master anchor" id="2">
+    <h2>OOPS inLab 3 matrix problem (copy constucter)</h2>
+    <div class="code" id="code">
+class Matrix{
+    int row,col;
+    int array[100][100];
+    public:
+        Matrix(int a,int b)
+        {
+            row = a;
+            col = b;
+        }
+    void storeValue(int num,int row,int col)
+    {  
+        array[row][col] = num;   
+    }
+    Matrix(const Matrix &amp;copy_){
+    int i,j;
+    row = copy_.row;
+    col = copy_.col;   
+    for(i=0;i&ltrow;i++){        
+        for(j=0;j&ltcol;j++){       
+            array[i][j]+=copy_.array[i][j]+copy_.array[i][j];
+            
+        }
+        
+    }
+    
+}
+    
+void printValues(){  
+    int i,j;   
+    for(i=0;i&ltrow;i++){        
+        for(j=0;j&ltcol;j++){        
+        cout&lt&ltarray[i][j]&lt&lt" ";    
+        }    
+        cout&lt&lt"\n";
+    }
+}
+    
+};
+    </div>
+</div>
+<div class="master anchor" id="3">
+    <h2>expand char in Easy part 3 in c </h2>
+    <div class="code">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+int main(){
+    char str[100];
+    scanf("%s",&str);
+    int len = strlen(str);
+    int i;
+    char temp[5];
+    int i_ = 0;
+    int hey = 0;
+    for(i=0;i&lt;len;i++){
+        if(str[i]&gt;=48 && str[i]&lt;=57){
+            temp[i_]=str[i];
+            i_++;
+        }else{
+            int size = atoi(temp);
+            int k;
+            for(k=0;k&lt;size;k++){
+                printf("%c",str[i]);
+            }
+            i_ = 0;
+            temp[0] = temp[1] = temp[2] = temp[3] = temp[4] = ' ';
+        }
+    }
+    return 0;
+}
+
+        
+    </div>
+</div>
+<div class="master anchor" id="4">
+    <h2>expand char in Easy part 3 in c++</h2>
+    <div class="code">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+
+int main(int argc, char** argv)
+{
+   
+   string str;
+   cin&gt;&gt;str;
+   int len = str.size();
+   int i,i_=0,hey=0;
+   string temp;
+   for(i=0;i&lt;len;i++){
+       if(str[i]&gt;=48 && str[i]&lt;=57){
+           temp[i_] = str[i];
+           i_++;
+       }else{
+           int size = stoi(temp);
+           int k;
+           for(k=0;k&lt;size;k++){
+               printf("%c",str[i]);
+           }
+           i_=0;
+           temp = " ";
+       }
+   }
+ 
+}
+    </div>
+</div>
+<div class="master anchor" id="5">
+    <h2>
+        OOPS inLab3 age and salary program
+    </h2>
+    <div class="code">
+friend void setAndPrientAgeSalary(int,int)
+p.age = pAge;
+p.salary = pSal;
+        </div>
+</div>
+<div class="master anchor" id="6">
+    <h2>
+    OOPS inLab 4 shop ItemA and ItemB program
+    </h2>
+    <div class="code">
+class Item{
+        int item_a_qty,item_b_qty,item_a_price,item_b_price;
+    public:
+        Item(int a,int b,int c,int d){
+            item_a_qty= a;
+            item_a_price= b;
+            item_b_qty =c;
+            item_b_price =d;
+        }
+    int getPricePerKg(){
+        return item_a_price/item_a_qty;
+    }
+    int getPricePerLitre(){
+        return item_b_price/item_b_qty;
+    }
+};
+class ItemA{
+    public:
+        ItemA(const Item &amp;copy1){
+            
+        }
+};
+class ItemB{
+    public:
+        ItemB(const Item &amp;copy1){
+            
+        }
+    
+};
+    </div>
+    </div>
+<div class="master anchor" id="7">
+    <h2> c++ Easy part3 betting game dice roll program</h2>
+    <div class="code">
+#include &ltiostream&gt;
+#include &ltstring.h&gt;
+using namespace std;
+
+
+int main(int argc, char** argv)
+{
+    string str;
+    int success,failure,net=0;
+    getline(cin,str);
+    cin&gt;&gt;success;
+    cin&gt;&gt;failure;
+    int size = str.size();
+    int i;
+    for(i=0;i&ltsize;i++){
+        switch(str[i]){
+            case '1':case '3':case '5':case '7':case '9':
+            net+=success;break;
+            case '2':case '4':case '6':case '8':
+            net-=failure;break;
+            default :
+            break;
+        }
+    }
+    cout&lt&ltnet;
+}
+    </div>
+</div>
+
+
+<div class="master anchor" id="8">
+<h2>
+c++ Easy part3 count of common factors              
+</h2>
+<div class="code">
+#include &ltbits/stdc++.h&gt;
+         
+using namespace std;
+         
+int main(int argc, char** argv)
+{
+int size;
+cin&gt;&gt;size;
+int array[size];
+int index;
+for(index=0;index&ltsize;index++){
+    cin&gt;&gt;array[index];
+}
+int count = 0;
+int temp = 0;
+int i=2;
+for(i;i&lt=1000;i++){
+    for(index=0;index&ltsize;index++){
+        if(array[index]%i==0){
+            temp+=1;
+        }
+    }
+    if(temp==size) count++;
+    temp = 0;
+}
+cout&lt&ltcount;
+}
+</div>
+</div>
+<div class="master anchor" id="9">
+<h2>oops inLab 4 define class child program</h2>
+<div class="code">
+class Child:public Father{
+public:
+    Child(int amt,int count):Father(amt,count){
+     
+    }
+    int getPropertyValue(){
+        return amount/childrenCount;
+    }
+    
+};
+</div>
+</div>
+
+<div class="master anchor" id="10">
+<h2>oops inLab 4 Fruits Apple and Orange program</h2>
+<div class="code">
+class Fruit{
+    public:
+    string name,type;
+    int price;
+    Fruit(int price){
+        this-&gt;price = price;
+    }
+    int getPrice(){
+         return price;
+    }
+};
+class Apple:public Fruit{
+    string name;
+    int price;
+    string type;
+    public:
+    Apple(string name,int price,string type):Fruit(price){
+        this-&gt;name = name;
+        this-&gt;price = price;
+        this-&gt;type = type;
+    }
+    int getPrice(){
+        return price;
+    }
+    string getTaste(){
+        return type;
+    }
+};
+class Orange:public Fruit{
+    string name,type;
+    int price;
+    public:
+    Orange(string name,int price,string type):Fruit(price){
+            this-&gt;name = name;
+            this-&gt;price = price;
+            this-&gt;type = type;
+        }
+        int getPrice(){
+            return price;
+        }
+        string getTaste(){
+            return type;
+        }
+};  
+</div>
+</div>
+
+<div class="master anchor" id="11">
+<h2>oops inLab 4 Tasks Designation Hierarchy</h2>
+<div class="code">
+class GroupLead{
+    public:
+    int taskCount;
+        GroupLead(int task){
+            taskCount = task;
+        }
+        int getTaskCount(){
+            return taskCount;
+        }
+};
+class TeamLead:public GroupLead{
+    public:
+    int taskCount;
+        TeamLead(int task):GroupLead(task){
+            taskCount = task;
+        }
+        int getTaskCount(){
+            return taskCount/2;
+        }
+};
+class Developer:public TeamLead{
+    int taskCount;
+    public:
+    Developer(int count):TeamLead(count){
+            taskCount = count;
+        }
+        int getTaskCount(){
+            return taskCount/2/3;
+        }
+};  
+</div>
+</div>
+
+<div class="master anchor" id="12">
+    <h2>DS inLab5 Expression Tree & Traversals</h2>
+    <div class="code">
+int rear = -1;
+struct Node* stack[30];
+
+struct Node* createNode(char let){
+struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
+temp-&gt;data = let;
+temp-&gt;left = temp-&gt;right = NULL;
+return temp;
+}
+void push(struct Node* temp){
+   stack[++rear] = temp;
+}
+struct Node* pop(){
+    return stack[rear--];
+}
+
+
+struct Node* constructExpressionTree(char* str){
+    int i,size;
+    size = strlen(str);
+    for(i=0;i&ltsize;i++){
+        if(isalnum(str[i])){
+            struct Node* tmp = createNode(str[i]);
+            push(tmp);
+        }
+        else{
+            struct Node* newNode;
+            newNode = createNode(str[i]);
+            newNode-&gt;data  = str[i];
+            newNode-&gt;right = pop();
+            newNode-&gt;left  = pop();
+            push(newNode);
+        }
+    }
+    
+    return pop();
+}
+int isEmpty(struct Node* head){
+    return (!head)?1:0;
+}
+void printPostfix(struct Node* head){
+    if(isEmpty(head)) return ;
+    printPostfix(head-&gt;left);
+    printPostfix(head-&gt;right);
+    printf("%c ",head-&gt;data);
+    
+}
+void printInfix(struct Node* head){
+    if(!head-&gt;left&amp;&amp;!head-&gt;right) printf("%c",head-&gt;data) ;
+    else{
+    printf("(");
+    printInfix(head-&gt;left);
+    printf("%c",head-&gt;data);
+    printInfix(head-&gt;right);
+    printf(")");
+    }
+}
+    </div>
+</div>
+<div class="master anchor" id="13">
+    <h2>OOPS inLab 4 Election Two Parties</h2>
+    <div class="code">
+class Donation
+{
+    float amount;
+        public:
+            Donation(float amt)
+            {
+                amount = amt;
+            }
+        float getAmount()
+        {
+            return amount;
+        }
+};
+
+
+class PartyBDonation : public Donation
+{
+    int partyBRatio,stateB,partyARatio;
+    float amount;
+    public:
+    PartyBDonation(int amount,int partyARatio,int partyBRatio,int stateB):Donation(amount)
+    {
+        this-&gt;amount = amount;
+        this-&gt;partyBRatio = partyBRatio;
+        this-&gt;partyARatio = partyARatio;
+        this-&gt;stateB = stateB;
+    }
+    float getDonation()
+    {
+        return partyBRatio*(amount/(partyARatio+partyBRatio));
+        
+    }
+    float getStateDonation()
+    {
+        return getDonation()*((stateB+5)/100.0);
+    }
+};
+
+
+class PartyADonation:public Donation
+{
+    int partyARatio,stateA,partyBRatio;
+    float amount;
+    public:
+    PartyADonation(int amount,int partyARatio,int partyBRatio,int stateA):Donation(amount)
+    {
+        this-&gt;amount = amount;
+        this-&gt;partyBRatio = partyBRatio;
+        this-&gt;partyARatio = partyARatio;
+        this-&gt;stateA = stateA;
+    }
+    float getDonation()
+    {
+         return partyARatio*(amount/(partyARatio+partyBRatio));
+    }
+    float getStateDonation()
+    {
+        return getDonation()*(stateA/100.0);
+    }
+};
+
+
+class StateX: public PartyADonation,public PartyBDonation
+{
+    int amount,partyARatio,partyBRatio,stateA,stateB;
+    public:
+    StateX(int amount,int partyARatio,int partyBRatio,int stateA,int stateB):
+    PartyADonation(amount,partyARatio,partyBRatio,stateA),
+    PartyBDonation(amount,partyARatio,partyBRatio,stateB)
+    {
+            this-&gt;amount = amount;
+            this-&gt;partyARatio = partyARatio;
+            this-&gt;partyBRatio = partyBRatio;
+            this-&gt;stateA = stateA;
+            this-&gt;stateB = stateB;
+    }
+        
+};
+    </div>
+</div>
+
+<div class="master anchor" id="14">
+    <h2>OOPS inLab 5 Unary Operator Overloading - class Distance</h2>
+    <div class="code">
+        class Distance{
+int Feet,Inch;
+ public:
+ Distance(int feet,int inch){
+   Feet = feet;
+   Inch = inch;
+ }
+ void display(){
+     cout&lt&ltFeet&lt&lt" "&lt&ltInch&lt&ltendl;
+ }
+    void operator++(){
+     Inch++;
+     if(Inch&gt;=12){
+         Feet++;
+         Inch-=12;
+     }
+ }
+};
+    </div>
+</div>
+
+
+<div class="master anchor" id="15">
+    <h2>OOPS inLab 5 Marks of Two Student</h2>
+    <div class="code">
+        int Mark;
+public:
+    void setMarks(int num){
+        Mark = num;
+    }
+    int getMarks(){
+        return Mark;
+    }
+    Student operator+(Student tmp){
+        Student obj;
+        obj.setMarks(tmp.getMarks()+Mark);
+        return obj;
+    }
+
+
+    </div>
+</div>
+
+
+<div class="master anchor" id="16">
+    <h2>OOPS inLab 5 sum of Two Distance</h2>
+    <div class="code">
+           int Feet,Inch;
+
+    public:
+        void setFeet(int num){
+            Feet = num;
+        }
+        void setInches(int num){
+            Inch = num;
+        }
+        int getFeet(){
+            return Feet;
+        }
+        int getInches(){
+            return Inch;
+        }
+        Distance operator+(Distance temp){
+            Distance new1;
+            int temp_Feet = temp.getFeet()+Feet;
+            int temp_Inch = temp.getInches()+Inch;
+            while(temp_Inch&gt;=12){
+                temp_Feet++;
+                temp_Inch-=12;
+            }
+            new1.setFeet(temp_Feet);
+            new1.setInches(temp_Inch);
+            return new1;
+        }
+
+
+    </div>
+</div>
+<div class="anchor master" id="17">
+<h2>DS inLab 8 Hash Table - Linear Probing</h2>
+<div class="code">
+#include&ltstdio.h&gt;
+#include&ltstdlib.h&gt;
+#define SIZE 10
+
+
+int table[SIZE] = {NULL};
+
+
+void display(){
+    int i;
+    for(i=0;i&ltSIZE;i++) 
+        printf("%d ",(table[i]==NULL)?-1:table[i]);
+    printf("\n");
+}
+
+
+void insert(int num){
+    int i;
+    int key = num%SIZE;
+    for(i=0;i&ltSIZE;i++){
+        int index = (key+i)%SIZE;
+        if(table[index]==num){
+            display();
+            break;
+        }
+        if(table[index]==NULL){
+            table[index] = num;
+            display();
+            break;
+        }
+    }
+    if(i==SIZE) printf("Table is full\n");
+}
+
+
+int main()
+{
+    int length,i;
+    scanf("%d",&amp;length);
+    int list[length];
+    for(i=0;i&ltlength;i++){
+        scanf("%d",&amp;list[i]);
+    }
+    for(i=0;i&ltlength;i++){
+        insert(list[i]);
+    }
+}
+</div>
+</div>
+<div class="master anchor" id="18">
+<h2>DS inLab 8 Hash Table - Quadratic Probing</h2>
+<div class="code">
+#include&ltstdio.h&gt;
+#include&ltstdlib.h&gt;
+int length;
+int list[100] = {NULL};
+
+
+void display(){
+    int  i;
+    for(i=0;i&ltlength;i++)
+        printf("%d ",(list[i]==NULL)?-1:list[i]);
+    printf("\n");
+}
+
+
+void insert(int num){
+    int i,key = num%length;
+    for(i=0;i&ltlength;i++){
+        int index = (key+(i*i))%length;
+        if(list[index]==num){
+            display();
+            break;
+        }
+        if(list[index]==NULL){
+            list[index] = num;
+            display();
+            break;
+        }
+    }
+    if(i==length) printf("Table is full\n");
+}
+
+
+int main()
+{
+    int i,size;
+    scanf("%d %d",&amp;size,&amp;length);
+    int temp[size];
+    for(i=0;i&ltsize;i++){
+        scanf("%d",&amp;temp[i]);
+    }
+    for(i=0;i&ltsize;i++){
+        insert(temp[i]);
+    }
+}
+</div>
+</div>
+<div class="sideDiv">
+    <div class="side-div-1">
+        <h4>
+            YouTube videos
+        </h4>
+        <div class="side-div-1-content">
+            <a href="https://youtu.be/5Bn8h6Id14U" target="_blank" >Learn c in tamil</a>
+            <a href="https://youtu.be/qH7m9ik3ILs" target="_blank">Learn c++ in tamil</a>
+            <a href="https://youtube.com/playlist?list=PLfVsf4Bjg79DLA5K3GLbIwf3baNVFO2Lq" target="_blank">OOPS c++ in english</a>
+            <a href="https://youtube.com/playlist?list=PLqM7alHXFySHm4VjV-OZgIrwdjXfCBQmI" target="_blank">tricks and tips in c</a>
+            <a href="https://youtu.be/xDVC3wKjS64" target="_blank">Dynamic memory alloction in c english</a>
+
+        </div>
+    </div>
+    <div class="side-div-service">
+        <h4>
+            Our Service
+        </h4>
+        <div class="side-div-service-content">
+            <ul>
+                <li>web service</li>
+                <li>gui desktop appliction using python (tkinter)</li>
+                <li>telegram bot (comming soon)</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="appDiv">
+        <h4 class="app-title">code pro max</h4>
+        <div class="appSource">
+            brand new application for typing in on click
+            this application is only for pc then this 
+            software run in python so install python in your system
+            then pip install tkinter and pyautogui library
+            <a href="./code_app.py" download="code_type.py">super fast (click) </a>
+        </div>
+    </div>
+</div>
+<a href="#top" class="pageTop">
+<img src="topArrow.png" alt="top arror" width="40px" >
+</a>
+<footer>
+    <div class="footerDiv">
+        Copyright © 2021 code IT forum. All rights reserved. 
+    </div>
+    <div class="logo_div">
+        <img src="insta_logo.png" alt="instagram" class="images">
+        <img src="whatsapp_logo.png" alt="whatsapp" class="images">
+        <img src="logo_logo.png" alt="twitter"class="images" >
+        <img src="youtubeLogo.png" alt="youtube" class="youtube_logo">
+        <img src="linkedin.png" alt="linkedin" class="images">
+
+    </div>
+</footer>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

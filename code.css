@@ -1,0 +1,233 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow-x: hidden;
+}
+header{
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	flex-direction: row;
+	padding: .3rem;
+	box-shadow: .1rem .1rem 1rem .012rem dimgray;
+}
+header span{
+	flex-grow: 1;
+}
+header h2{
+	color: rgb(14, 139, 241);
+	text-align: center;
+	cursor: pointer;	
+}
+header ul{
+	list-style: none;
+	flex-grow: 1;
+	color: white;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+header ul li{
+	background-color: rgb(15, 180, 15);
+	padding-left: .8rem;
+	padding-right: .8rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	cursor: pointer;
+	border-radius: .3rem;
+	border-bottom:2px solid transparent;
+
+}
+
+
+header ul li:hover{
+	background-color: white;
+	color:black;
+	border-bottom:2px solid green;
+	border-radius: 0%;
+}
+.title{
+    color:rgb(196, 197, 196);;
+    text-align: center;
+	position: relative;
+	top:3rem;
+	text-transform: uppercase;
+	letter-spacing: .4rem;
+}
+.container{
+    background-color: rgb(234, 241, 234);
+    width:40vw;
+    margin: 0 auto;
+	padding-bottom: 1rem;
+    position: relative;
+	border-radius: .5rem;
+    top: 5rem;
+}
+
+
+.divTitle{
+    color: white;
+	border-radius: .5rem .5rem 0 0;
+    background-color: rgb(53, 184, 245);
+    text-align: center;
+    padding: 0.3rem;
+	margin-bottom: 2rem;
+}
+
+.inputDiv{
+	margin: .6rem auto;
+	width: 30vw;
+}
+
+form label{
+	font-size: 1.1rem;
+	color: gray;
+	display: block;
+	margin: .3rem;
+	margin-left: 0;
+	/* visibility: hidden; */
+}
+
+
+.inputDiv input,.inputDiv textarea{
+	border: none;
+	width:30vw;
+	padding: .6rem;
+	font-size: 1.1rem;
+}
+
+.inputDiv input:focus ,.inputDiv textarea:focus{
+	outline: 2px solid rgb(53, 184, 245);
+}
+
+
+.butn{
+	background-color: rgb(55, 197, 240);
+	font-size: 1.3rem;
+	border: 2px solid white;
+	width:6rem;
+	color: white;
+	padding: .3rem;
+	display: block;
+	margin: .3rem auto;
+}
+
+.butn:active{
+	border: 2px solid transparent;
+}
+
+.alertBox{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(49, 45, 45, 0.404);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.alertDiv{
+	padding: 2rem;
+	color: gray;
+	background-color: white;
+	text-transform:capitalize;
+	border:2px solid white;
+	width:20rem;
+	text-align: center;
+	box-shadow: .1rem .1rem 1rem .1rem rgb(110, 109, 109);
+}
+.alert_img{
+	width:4rem;
+}
+.alertDiv h3{
+	margin-top:1rem;
+}
+.image_line{
+	width:6.5rem;
+	padding-top:1rem;
+	padding-bottom: 1rem;
+	border:2px solid rgba(128, 128, 128, 0.74);
+	border-radius:50vw;
+	margin: 0 auto;
+}
+
+.alertButn{
+	font-size: 1.3rem;
+	padding: .5rem;
+	width:10rem;
+	color: white;
+	background-color: rgb(8, 167, 8);
+	border-radius: .3rem;
+	border: 2px solid transparent;
+	margin-top: 1rem;
+}
+
+.alertButn:hover{
+	border: 2px solid white;
+}
+
+@media only screen and (max-width:450px){
+	header{
+		flex-direction: column;
+	}
+	header h2{
+		margin-bottom:1rem;
+		
+	}
+	header ul li{
+		padding: .3rem;
+	}
+	#Fimage{
+		width:80vw;
+	}
+}
+
+@media only screen and  (max-width:750px){
+	.container{
+		width:60vw;
+	}
+	.inputDiv{
+		width:50vw;
+	}
+	.inputDiv input,.inputDiv textarea{
+		width:50vw;
+	}
+}
+
+@media only screen and  (max-width:750px){
+	.container{
+		width:70vw;
+	}
+	.inputDiv{
+		width:60vw;
+	}
+	.inputDiv input,.inputDiv textarea{
+		width:60vw;
+	}
+}
+
+@media only screen and  (max-width:500px){
+	.container{
+		width:90vw;
+	}
+	.inputDiv{
+		width:80vw;
+	}
+	.inputDiv input,.inputDiv textarea{
+		width:80vw;
+	}
+	.alertDiv{
+		width:90vw;
+	}
+	.alertButn{
+		width:8rem;
+	}
+}

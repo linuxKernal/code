@@ -1,0 +1,348 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow-x: hidden;
+}
+header{
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	flex-direction: row;
+	padding: .3rem;
+	box-shadow: .1rem .1rem 1rem .012rem dimgray;
+}
+header span{
+	flex-grow: 1;
+}
+header h2{
+	color: rgb(14, 139, 241);
+	text-align: center;
+	cursor: pointer;	
+}
+header ul{
+	list-style: none;
+	flex-grow: 1;
+	color: white;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+header ul li{
+	background-color: rgb(15, 180, 15);
+	padding-left: .8rem;
+	padding-right: .8rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	cursor: pointer;
+	border-radius: .3rem;
+	border-bottom:2px solid transparent;
+
+}
+
+
+header ul li:hover{
+	background-color: white;
+	color:black;
+	border-bottom:2px solid green;
+	border-radius: 0%;
+}
+
+
+.topic-div{
+	position: relative;
+	margin: 3rem 1rem;
+	width:75vw;
+	padding: .3rem;
+	background-color: rgb(18, 247, 10);
+}
+
+.topic-div-title{
+	color: green;
+	background-color: white;
+	padding: .2rem;
+}
+
+.list-topics{
+	
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 1rem;
+}
+
+.list-topics a{
+	text-decoration: none;
+	background-color: rgba(128, 128, 128, 0.377);
+	padding:.3rem;
+	color: white;
+	margin:.3rem;
+	/*border-bottom: 3px solid white;*/
+}
+
+.list-topics a:hover{
+	/*text-decoration: underline;*/
+	background-color: white;
+	color: limegreen;
+}
+
+.master{
+	background: linear-gradient(0, #FFDEE9 ,#B5FFFC);
+	width:60vw;
+	margin-left: 1rem;
+	padding: .5rem;
+	margin-top:3rem;
+}
+.master h2{
+	color: green;
+	background-color: white;
+	padding: .3rem;
+	text-align: center;
+}
+.code{
+	white-space: pre-wrap;
+	color: black;
+}
+.anchor{
+	position: relative;
+	padding-top: 60px; 
+	}
+.sideDiv{
+	 /*background-color: rgba(132, 214, 241, 0.719); */
+	position:fixed;
+	top:3vw;
+	width:15vw;
+	right: 1rem;
+	height:100vh;
+	/* overflow-y: auto; */
+}
+
+.side-div-1{
+	background-color: rgb(248, 230, 69);
+	padding: .3rem;
+	margin: 1rem auto;
+	width:13vw;
+}
+.side-div-1 h4{
+	color: green;
+	text-align: center;
+	background-color: white;
+	margin-bottom:.5rem;
+	text-align: center;
+}
+
+.side-div-1-content{
+	display: flex;
+	flex-direction: column;
+	/*padding-bottom:5vw;*/
+}
+
+.side-div-1-content a{
+	text-decoration: none;
+	margin: .2rem;
+	color:black;
+}
+
+.side-div-1-content a:hover{
+	text-decoration: underline ;
+}
+
+.side-div-service{
+	background-color: wheat;
+	width: 13vw;
+	padding: .3rem;
+	margin: 1rem auto;
+	/* padding-bottom:3rem; */
+}
+.side-div-service h4{
+	color: white;
+	background-color: rgb(16, 131, 167);
+	text-align: center;
+}
+.side-div-service-content ul{
+	list-style: none;
+	padding-top: .3rem;
+}
+.side-div-service-content ul li{
+	margin:.5rem;
+	color: black;
+}
+.side-div-service-content ul li::before{
+	content: "# ";
+	color: black;
+}
+
+.telegram{
+	background-color: rgba(63, 173, 247, 0.815);
+	width: 13vw;
+	margin: 0 auto;
+	margin-top:1rem;
+	padding:.3rem;
+}
+.telegramTitle{
+	background-color: white;
+	color: green;
+	text-align:center;
+	margin-bottom: .3rem;
+}
+
+.telegram-content{
+	text-align: left;
+	color: white;
+}
+.pageTop{
+	position: sticky;
+	bottom: 3.5rem;
+	float: right;
+	z-index:5;
+}
+
+.pageTop img{
+	border-radius:40%;
+}
+
+footer{
+	background-color: green;
+	position:fixed;
+	bottom:0;
+	display: flex;
+	gap:1rem;
+	justify-content: space-around;
+	align-items: center;
+	width: 100vw;
+	flex-wrap: wrap;
+}
+footer .footerDiv{
+	color: white;
+	/* background-color: greenyellow; */
+	width:23rem;
+}
+.images{
+	width:30px;
+}
+.logo_div{
+	display: flex;
+	align-items: center;
+	width:20rem;
+	justify-content: space-evenly;
+}
+.youtube_logo{
+	width: 80px;
+}
+
+.newButn{
+	color: white;
+	background-color: rgb(11, 184, 11);
+	font-size: 1.2rem;
+	padding: .3rem;
+	border: 2px solid transparent;
+	margin: 1rem;
+	width:8rem;
+	border-radius:.3rem;
+}
+
+.newButn:hover{
+	border:2px solid white;
+}
+
+#program{
+	margin-bottom: 6rem;
+}
+
+.appDiv{
+	background-color: rgb(65, 225, 78);
+	padding:.3rem;
+	width:13vw;
+	margin: 0 auto;
+}
+.app-title{
+	background-color: white;
+	text-align: center;
+}
+.appSource {
+	color: white;
+	margin-top:.3rem;
+	text-align: left;
+	padding:.3rem;
+}
+.appSource a{
+	text-decoration: none;
+	font-weight: 900;
+	background-color: white;
+	color: royalblue;
+	display: block;
+}
+#Fimage{
+	width:50vw;
+	box-shadow: .5rem .5rem 1rem .1rem gray;
+	position: relative;
+	left: 3rem;
+	padding:1rem;
+}
+
+.processingDiv{
+	background-color: rgba(56, 58, 56, 0.63);
+	width:100vw;
+	height:100vh;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ProTitle{
+	color: white;
+	/* background-color: green; */
+	width:30vw;
+	font-size: 2rem;
+	z-index: 3;
+	padding: 1rem;
+	text-align: center;
+}
+
+@media only screen and (max-width:750px){
+	.sideDiv{
+		position: relative;
+		width:70vw;
+	}
+	.master{
+		width:90vw;
+	}
+	.side-div-1,.side-div-service,.appDiv,.telegram{
+		width:10rem;
+	}
+	footer{
+		margin-top: 1rem;
+		position: static;
+	}
+}
+
+@media only screen and (max-width:450px){
+	header{
+		flex-direction: column;
+	}
+	header h2{
+		margin-bottom:1rem;
+		
+	}
+	header ul li{
+		padding: .3rem;
+	}
+	#Fimage{
+		width:80vw;
+	}
+	footer{
+		margin-top: 1rem;
+		position: static;
+	}
+	
+}
