@@ -7,51 +7,7 @@
 body{
 	overflow-x: hidden;
 }
-header{
-	background-color: rgb(255, 255, 255);
-	display: flex;
-	position: sticky;
-	top: 0;
-	z-index: 10;
-	flex-direction: row;
-	padding: .3rem;
-	box-shadow: .1rem .1rem 1rem .012rem dimgray;
-}
-header span{
-	flex-grow: 1;
-}
-header h2{
-	color: rgb(14, 139, 241);
-	text-align: center;
-	cursor: pointer;	
-}
-header ul{
-	list-style: none;
-	flex-grow: 1;
-	color: white;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: row;
-}
-header ul li{
-	background-color: rgb(15, 180, 15);
-	padding-left: .8rem;
-	padding-right: .8rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	cursor: pointer;
-	border-radius: .3rem;
-	border-bottom:2px solid transparent;
 
-}
-
-
-header ul li:hover{
-	background-color: white;
-	color:black;
-	border-bottom:2px solid green;
-	border-radius: 0%;
-}
 .title{
     color:rgb(196, 197, 196);;
     text-align: center;
@@ -60,7 +16,7 @@ header ul li:hover{
 	text-transform: uppercase;
 	letter-spacing: .4rem;
 }
-.container{
+.container1{
     background-color: rgb(234, 241, 234);
     width:40vw;
     margin: 0 auto;
@@ -191,7 +147,7 @@ form label{
 }
 
 @media only screen and  (max-width:750px){
-	.container{
+	.container1{
 		width:60vw;
 	}
 	.inputDiv{
@@ -203,7 +159,7 @@ form label{
 }
 
 @media only screen and  (max-width:750px){
-	.container{
+	.container1{
 		width:70vw;
 	}
 	.inputDiv{
@@ -215,7 +171,7 @@ form label{
 }
 
 @media only screen and  (max-width:500px){
-	.container{
+	.container1{
 		width:90vw;
 	}
 	.inputDiv{

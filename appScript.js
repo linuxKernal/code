@@ -45,6 +45,8 @@ const getCode = async ()=>{
         }
     })
     winDiv.style.display = "none";
+    document.body.style.overflowX = "hidden"
+    document.body.style.overflowY = "auto"
 }
 
 getCode()

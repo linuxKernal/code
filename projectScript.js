@@ -11,6 +11,7 @@ const getFunction = (num)=>{
         window.location.href = "aboutPage.html"
     }
 }
+document.body.style.overflow = "hidden"
 
 const basePage = document.getElementById("home");
 
@@ -51,6 +52,7 @@ printData();
 console.log("ERROR found while get post",err);
 });
 winDiv.style.display = "none";
+document.body.style.overflow = "auto"
 }
 
 
