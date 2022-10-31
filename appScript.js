@@ -1,9 +1,9 @@
 const titles = document.getElementById("titles");
 const master = document.getElementById("program");
-
 const newButn = document.getElementsByClassName("newButn");
-
 const winDiv = document.getElementById("processingDiv");
+
+const URL = "https://code-it-forum.onrender.com"
 
 const copyFunc = (e)=>{
     let ID = e;
@@ -14,7 +14,7 @@ const copyFunc = (e)=>{
 
 let index = 0;
 const getCode = async ()=>{
-    await fetch("https://serverlessfunction.herokuapp.com/sourcecode").then(async res=>{
+    await fetch(URL+"/sourcecode").then(async res=>{
         return await res.json();
     }).then(response=>{
         for(list of response){

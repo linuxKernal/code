@@ -40,7 +40,7 @@ const printData = ()=>{
   }
 }
 
-const URL = "https://serverlessfunction.herokuapp.com/";
+const URL = "https://code-it-forum.onrender.com/";
 const winDiv = document.getElementById("processingDiv");
 
 const getPostData = async ()=>{

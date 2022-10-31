@@ -27,7 +27,7 @@ const func = ()=>{
 	div2.classList.add("graphic");
 
 }
-const URL = "https://serverlessfunction.herokuapp.com/";
+const URL = "https://code-it-forum.onrender.com/";
 
 
 const addviews = async()=>{

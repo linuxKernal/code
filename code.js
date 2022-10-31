@@ -19,7 +19,7 @@ const temp = async (param)=>{
     const title = param.title.value.trim();
     const note = param.note.value.trim();
     const code = param.code.value.trim();
-    await fetch("https://serverlessfunction.herokuapp.com/codebase",{method:'POST',
+    await fetch("https://code-it-forum.onrender.com/codebase",{method:'POST',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -27,8 +27,8 @@ const temp = async (param)=>{
       body: JSON.stringify({title:title,program:code,time:date.toLocaleString('en-GB', options),note:note})
     })
     .then(async res=>{
-        return await res.json();
         butn.innerText = "Done";
+        return await res.json();
     })
     .then(data=>{
         alertFunc(data.msg);
