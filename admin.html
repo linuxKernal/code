@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin dashboard</title>
+    <style>
+        h2{
+            background-color: green;
+            color: white;
+            padding: .5rem;
+            text-align: center;
+        }
+        #root{
+                font-size:1.4rem;
+                color: royalblue;
+                text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome Admin</h2>
+    <h3 id="root">4</h3>
+<script>
+    const URL = "https://code-it-forum.onrender.com/getviews";
+
+    const div = document.getElementById("root");
+    const getViews = async()=>{
+        await fetch(URL)
+        .then(async rawdata=>{
+           return await rawdata.json();
+        }).then(data=>{
+            div.innerText =  data['0'].userlength;
+        })
+        
+    }
+    getViews();
+</script>
+</body>
+</html>

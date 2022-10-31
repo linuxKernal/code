@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project_css.css">
+    <title>my projects</title>
+</head>
+<body>
+
+    <header id="#top">
+        <span>
+        <h2 id="home">
+            Code IT forum
+        </h2>
+        </span>
+            <ul>
+                <li onclick="getFunction(1)">Home</li>
+                <li onclick="getFunction(2)">Post</li>
+                <li onclick="getFunction(3)">Code</li>
+                <li onclick="getFunction(4)">About</li>
+            </ul>
+    </header>
+
+    <h2 class="pageTitle">Post your Ideas</h2>
+    <div class="masterDiv">
+        <h3>Make a Post</h3>
+        <div class="postInput">
+            <textarea type="text" id="postText" placeholder="new post"></textarea><br>
+        <button class="butn" id="butn">Post</button>
+    </div>
+    <br><br>
+    <div id="newPost">
+        
+    </div>
+    </div>
+<div class="processingDiv" id="processingDiv" style="display:flex;">
+    <h2 class="ProTitle">Loading...</h2>
+</div>
+<script src="projectScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ocean of images</title>
+    <link rel="stylesheet" href="view.css">
+</head>
+<body>
+    <h2 class="page_title">Hall of Frame</h2>
+    <div class="imagelib" id="imagelib">
+    </div>
+    <div class="processingDiv" id="processingDiv" style="display:flex;">
+        <h2 class="ProTitle">Loading...</h2>
+    </div>
+<script>
+const winDiv = document.getElementById("processingDiv");
+    fetch("https://serverlessfunction.herokuapp.com/getImages", { method: "get",headers: {'Content-Type': 'application/json'}})
+        .then(async res => {
+            return res.json();
+        }).then(data=>{
+            const masterDiv = document.getElementById("imagelib");
+            data[0]["imageUrl"].forEach(element => {
+                const imageDiv = document.createElement('div')
+                imageDiv.setAttribute("class","imgdiv")
+                const image = document.createElement("img")
+                image.setAttribute("src",element)
+                imageDiv.append(image)
+                masterDiv.append(imageDiv)
+            });
+            winDiv.style.display = "none";
+        })
+        
+
+
+</script>
+</body>
+</html>

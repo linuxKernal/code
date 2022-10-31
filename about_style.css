@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+header{
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	flex-direction: row;
+	padding: .3rem;
+	box-shadow: .1rem .1rem 1rem .012rem dimgray;
+}
+header span{
+	flex-grow: 1;
+}
+header h2{
+	color: rgb(14, 139, 241);
+	text-align: center;
+	cursor: pointer;	
+}
+header ul{
+	list-style: none;
+	flex-grow: 1;
+	color: white;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+header ul li{
+	background-color: rgb(15, 180, 15);
+	width:5rem;
+	padding: .5rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: .3rem;
+	border-bottom:2px solid transparent;
+
+}
+
+header ul li:hover{
+	background-color: rgb(84, 230, 84);
+}
+
+header ul li a{
+    color: black;
+}
+.homeImage{
+    object-fit:contain;
+    width:100vw;
+    height:55vh;
+}
+.homeImage img{
+    width:100vw;
+    height:55vh;
+    text-align:center;
+    filter: brightness(70%);
+}
+.imageText{
+    position: absolute;
+    font-size:3rem;
+    /* background-color: steelblue; */
+    width:100vw;
+    color: white;
+    top: 30vh;
+    text-align: center;
+    z-index: 2;
+}
+.divText{
+    position: relative;
+    top:5rem;
+}
+.divText p{
+    text-align: center;
+    width:80vw;
+    margin: 1rem auto;
+}
+.divTextTitle{
+    /* color: green; */
+    text-align: center;
+}
+.graphic{
+	transform: translateY(-10px);
+	transition-duration:1s;
+}
+
+@media only screen and (max-width:540px){
+	header{
+		flex-direction: column;
+	}
+	header h2{
+		margin-bottom:1rem;
+	}
+	header ul li{
+		padding: .5rem;
+	}
+}
