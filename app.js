@@ -27,11 +27,11 @@ const func = ()=>{
 	div2.classList.add("graphic");
 
 }
-const URL = "https://code-it-forum.onrender.com/";
+const URL1 = "https://code-it-forum.onrender.com/";
 
 
 const addviews = async()=>{
-  await fetch(`${URL}views`,{method:'POST'})
+  await fetch(`${URL1}views`,{method:'POST'})
 }
 
 
