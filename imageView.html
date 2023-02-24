@@ -16,7 +16,7 @@
     </div>
 <script>
 const winDiv = document.getElementById("processingDiv");
-    fetch("https://serverlessfunction.herokuapp.com/getImages", { method: "get",headers: {'Content-Type': 'application/json'}})
+    fetch("https://code-it-forum.onrender.com/getImages", { method: "get",headers: {'Content-Type': 'application/json'}})
         .then(async res => {
             return res.json();
         }).then(data=>{
